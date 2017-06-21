@@ -30,14 +30,14 @@ def workshop_state_editor(current_state_dict, start_state_dict):
     if choice == 'exit':
         # Functionality:
         # Exits State Creation and Saves Changes
-        print("...Leaving State Creation - w/ Save... ")  # Simple Print Warning
+        print("...Leaving State Editor - w/ Save... ")  # Simple Print Warning
         state_dict.update(current_state_dict)  # Adds Previous States to the State Dict
         return state_dict  # Desired Exit Strategy --> Returns Updated Dictionary to Write to JSON
 
     elif choice == 'no save':
         # Functioanlity:
         # 1.) Returns start_state_dict --> Stores with each pass so changes don't get applied
-        print("...Leaving State Creation - w/o Save...")
+        print("...Leaving State Editor - w/o Save...")
         return start_state_dict
 
     elif choice == 'new':
@@ -77,9 +77,10 @@ def workshop_state_editor(current_state_dict, start_state_dict):
         return workshop_state_editor(state_dict, start_state_dict)
 
 
+###########################################
 # Function Group For Options
 ###########################################
-# New State Editor Group
+
 def new_state():
     # 1.)Input a State Name
     state_name = input("Please enter the name of the State you would like to add: ")
@@ -103,14 +104,14 @@ def new_state():
 def edit_state(current_state_dict, name):
     # 1.)Input a State Name
     if not name:
-        state_name = input("Please enter the name of the state you would like to edit: ")
+        state_name = input("Please enter the name of the State you would like to edit: ")
         # Error Check: Existance Check
         return edit_state(current_state_dict, state_name)
     else:
         state_name = name
         state_dict = current_state_dict
         editing_state = state_dict.pop(state_name)  # Takes Dict Value for State Name
-        choice = input("What Property would you like to Edit(Name, Type, Functions, Transitions): ")
+        choice = input("What Property would you like to Edit(Name, Type, Functions, Transitions, Done): ")
         choice = choice.lower()
 
         if choice == 'done':
@@ -164,16 +165,8 @@ def remove_state(state_dict):
     return remove_state_dict
 
 
-
-def new_state_error_check():
-    return
-
-    ############################################
-    # Edit State Editor Group
-
-
-
-
+#########################################
+# Function Group For Error Checks
 
 def edit_state_error_check():
     return

@@ -6,7 +6,7 @@
 # 3.) Read and Write Function Calls
 
 from workshop.SM_State_Editor import *
-
+from workshop.SM_Transition_Editor import *
 
 def workshop_setup():
     resources = get_resources()
@@ -23,6 +23,11 @@ def workshop_setup():
             current_dict = get_state_dict()
             new_dict = workshop_state_editor(current_dict, current_dict)
             save_state_dict(new_dict)
+        elif choice == 'transitions':
+            current_dict = get_trans_dict()
+            new_dict = workshop_transition_editor(current_dict, current_dict)
+            save_trans_dict(new_dict)
+
     else:
         # Segment for Error Checking System w/o resources
         print("No Resources Found - ")
@@ -56,9 +61,20 @@ def get_state_dict():
     return state_dict
 
 
+def get_trans_dict():
+    import json
+    with open('resources/transitions.txt') as trans_file:
+        trans_dict = json.load(trans_file)
+    return trans_dict
+
 # Converts Dict to JSON for saving
 def save_state_dict(saving_dict):
     with open('resources/states.txt', 'w') as outfile:
+        json.dump(saving_dict, outfile)
+
+
+def save_trans_dict(saving_dict):
+    with open('resources/transitions.txt', 'w') as outfile:
         json.dump(saving_dict, outfile)
 
 
