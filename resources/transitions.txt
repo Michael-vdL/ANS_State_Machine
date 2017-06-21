@@ -1,1 +1,1 @@
-{}
+{"Healthy": {"dest": "Healthy", "func": "Do_Health"}, "Quarantine": {"dest": "Quarantine", "func": "Do_Func"}}

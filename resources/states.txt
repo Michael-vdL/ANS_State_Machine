@@ -1,1 +1,1 @@
-{}
+{"Quarantine": {"type": "normal", "func_perms": ["mark"], "trans_perms": ["Healthy"]}, "Start": {"type": "start", "func_perms": ["enter", "mark"], "trans_perms": ["Healthy", "Quarantine"]}, "Healthy": {"type": "end", "func_perms": ["enter"], "trans_perms": ["Quarantine"]}}

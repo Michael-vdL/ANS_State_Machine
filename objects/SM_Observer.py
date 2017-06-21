@@ -1,6 +1,36 @@
 #!/usr/bin/python
 
 class Observer:
+    def __init__(self, name, state_list, trans_list):
+        self.name = name  # Probably useless variable, incase multiple observers become useful
+        self.states = state_list  # List of states for observer
+        self.transitions = trans_list  # List of transitions for observer
+
+    def monitor_network_json(self):
+        # Functionality: Monitors the network json for updates
+        # 1.) Determines the nature of the update
+        # 2.) Determines which state the update effects
+        # 3.) Designates which function will handle the update
+        return
+
+    def get_network(self):
+        # Functionality: Sets up a Mininet network for testing
+
+        return
+
+    def assign_new_node(self):
+        # Funcationality: When new nodes are discovered it assigns them to start state.
+
+        return
+
+    def running(self):
+        # Functionality: Controls everything the observer does
+        # Currently a Manual Interactive method --> Will be automatic and controlled from elsewhere
+        return
+
+
+"""""
+class Observer:
     def __init__(self, name, component_list, mininet_network):
         #Configuring Observer from files/driver
         self.name = name
@@ -90,3 +120,5 @@ class Observer:
     #Temp way to modularize stopping mn
     def net_stop(self):
         self.net.stop()
+
+"""""

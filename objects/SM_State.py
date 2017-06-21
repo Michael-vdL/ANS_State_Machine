@@ -2,13 +2,12 @@
 #Takes in load data (state_name, trans_perm_list) --> See SM_File_Loader.py
 
 class State(object):
-    def __init__(self, state_name, state_type, trans_perm_list, function_perm_list, function_item_list):
+    def __init__(self, state_name, state_type, trans_list, function_list):
         # Static State Variables
         self.name = state_name  # Reference Name for State
         self.type = state_type  # For assigning Start(Idea : Device Discorvery State) or End(Idea : Device Removal State)
-        self.perms = trans_perm_list  # Permissions for Transitions from state. Allow transitions to be global
-        self.func_perms = function_perm_list  # Permissions for Functions this state has access to
-        self.func_items = function_item_list  # Possible Parameters for each Function
+        self.trans = trans_list  # Permissions for Transitions from state. Allow transitions to be global
+        self.funcs = function_list  # Permissions for Functions this state has access to
         # Dynamic Variables
         self.nodes_in_state = []
         self.nodes_to_swap = {}

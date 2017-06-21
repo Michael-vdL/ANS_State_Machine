@@ -90,11 +90,11 @@ def new_state():
     # Error Check: if Start, check if only start
     # 3.)Input Function Permissions
     state_functions = input(
-        "Please Enter the Functions you would like to give this state acccess to(seperated by commas, ex. enter,mark): ")
+        "Please Enter the Functions you would like to give this state has access to(seperated by commas, ex. enter,mark): ")
     state_functions = state_functions.replace(' ', '')
     state_functions = state_functions.split(',')
     # 4.)Input Transfer Permissions
-    state_transfer = input("Please Enter the States this state can transfer to(seperated by comas): ")
+    state_transfer = input("Please Enter the Transitions this state has access t(seperated by comas): ")
     state_transfer = state_transfer.replace(' ', '')
     state_transfer = state_transfer.split(',')
     print("...Adding New State: {}...".format(state_name))
