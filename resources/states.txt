@@ -1,1 +1,1 @@
-{"Jonas": {"type": "start", "func_perms": ["enter", " mark"], "trans_perms": ["Brothers"]}, "Brothers": {"type": "end", "func_perms": ["mark"], "trans_perms": ["Jonas"]}}
+{"type": "end", "func_perms": ["mark", "enter"], "trans_perms": ["Testing"]}

@@ -1,8 +1,5 @@
 #!/usr/bin/python
 
-from SM_Abstracts import *
-from mininet.net import Mininet
-
 class Observer:
     def __init__(self, name, component_list, mininet_network):
         #Configuring Observer from files/driver

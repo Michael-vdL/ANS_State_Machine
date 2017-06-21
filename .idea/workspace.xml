@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b10fa42-7d8a-4b26-969c-3c96c58f015c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SM_WorkShop.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/update.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/states.txt" afterPath="$PROJECT_DIR$/resources/states.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/transitions.txt" afterPath="$PROJECT_DIR$/resources/transitions.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/update.txt" afterPath="$PROJECT_DIR$/SM_State_Editor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/SM_Transition_Editor.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SM_FIle_Unloader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SM_File_Loader.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SM_Maker.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SM_Prototype_Driver.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Get_Fished.py" afterPath="$PROJECT_DIR$/tests/Get_Fished.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SM_Abstracts.py" afterPath="$PROJECT_DIR$/objects/SM_Abstracts.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SM_Observer.py" afterPath="$PROJECT_DIR$/objects/SM_Observer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SM_State_Editor.py" afterPath="$PROJECT_DIR$/workshop/SM_State_Editor.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SM_WorkShop.py" afterPath="$PROJECT_DIR$/workshop/SM_WorkShop.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SM_Abstracts.py" afterPath="$PROJECT_DIR$/SM_Abstracts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SM_Maker.py" afterPath="$PROJECT_DIR$/SM_Maker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/states.txt" afterPath="$PROJECT_DIR$/resources/states.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +28,17 @@
         <state>
           <leaf>
             <file leaf-file-name="SM_State_Editor.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/SM_State_Editor.py">
+              <entry file="file://$PROJECT_DIR$/workshop/SM_State_Editor.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="692">
-                    <caret line="77" column="42" lean-forward="true" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
-                    <folding />
+                  <state relative-caret-position="170">
+                    <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+                    <folding>
+                      <element signature="e#2586#3297#0" expanded="false" />
+                      <element signature="e#3336#3552#0" expanded="false" />
+                      <element signature="e#3571#3721#0" expanded="false" />
+                      <element signature="e#3843#4843#0" expanded="false" />
+                      <element signature="e#7220#7526#0" expanded="false" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -42,23 +52,21 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="SM_Abstracts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SM_Abstracts.py">
+        <entry file="file://$PROJECT_DIR$/objects/SM_Abstracts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SM_WorkShop.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SM_WorkShop.py">
+        <entry file="file://$PROJECT_DIR$/workshop/SM_WorkShop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#206#229#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="115">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +75,17 @@
         <entry file="file://$PROJECT_DIR$/resources/states.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="170" lean-forward="false" selection-start-line="0" selection-start-column="170" selection-end-line="0" selection-end-column="170" />
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SM_Transition_Editor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workshop/SM_Transition_Editor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,14 +115,17 @@
         <option value="$PROJECT_DIR$/SM_Abstracts.py" />
         <option value="$PROJECT_DIR$/SM_Maker.py" />
         <option value="$PROJECT_DIR$/SM_WorkShop.py" />
-        <option value="$PROJECT_DIR$/resources/states.txt" />
         <option value="$PROJECT_DIR$/SM_State_Editor.py" />
+        <option value="$PROJECT_DIR$/workshop/SM_Transition_Editor.py" />
+        <option value="$PROJECT_DIR$/workshop/SM_WorkShop.py" />
+        <option value="$PROJECT_DIR$/resources/states.txt" />
+        <option value="$PROJECT_DIR$/workshop/SM_State_Editor.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="727" />
+    <option name="width" value="714" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -145,6 +166,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ANS_State_Machine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ANS_State_Machine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -156,6 +191,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine\workshop" />
+      <recent name="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine\objects" />
+      <recent name="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine\tests" />
       <recent name="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine\resources" />
       <recent name="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine" />
     </key>
@@ -185,7 +223,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ANS_State_Machine" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SM_WorkShop.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Michael Von Der Lipp\Documents\GitHub\ANS_State_Machine\workshop\SM_WorkShop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,16 +320,25 @@
       <option name="project" value="LOCAL" />
       <updated>1497970779492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version 0.2 - ANS Network State Machine&#10;Began to Structure for Modular Functions&#10;Reworked State JSON Editor&#10;Began Structure For SM_WorkShop --&gt; Driver for Editing State Machines&#10;&#10;Lots of Documentation for SM_Workshop files&#10;Some added Documentation for SM_Abstract (As far as Modular Functionality)">
+      <created>1497991038136</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1497991038136</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="727" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="714" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31926864" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47949526" sideWeight="0.21083455" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.472" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4416" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -303,71 +350,30 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47949526" sideWeight="0.21083455" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47949526" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14494875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 0.1 - ANS Network State Machine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1 - ANS Network State Machine" />
+    <MESSAGE value="Version 0.2 - ANS Network State Machine&#10;Began to Structure for Modular Functions&#10;Reworked State JSON Editor&#10;Began Structure For SM_WorkShop --&gt; Driver for Editing State Machines&#10;&#10;Lots of Documentation for SM_Workshop files&#10;Some added Documentation for SM_Abstract (As far as Modular Functionality)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.2 - ANS Network State Machine&#10;Began to Structure for Modular Functions&#10;Reworked State JSON Editor&#10;Began Structure For SM_WorkShop --&gt; Driver for Editing State Machines&#10;&#10;Lots of Documentation for SM_Workshop files&#10;Some added Documentation for SM_Abstract (As far as Modular Functionality)" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SM_Tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APIs/SM_API_Function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SM_Maker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SM_Prototype_Driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -380,14 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SM_File_Loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/update.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -396,28 +394,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SM_Abstracts.py">
+    <entry file="file://$PROJECT_DIR$/SM_Maker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="-692">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SM_WorkShop.py">
+    <entry file="file://$PROJECT_DIR$/SM_Prototype_Driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#206#229#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-183">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SM_State_Editor.py">
+    <entry file="file://$PROJECT_DIR$/SM_Tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="77" column="42" lean-forward="true" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SM_File_Loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workshop/SM_Transition_Editor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_Abstracts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workshop/SM_WorkShop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -425,8 +453,22 @@
     <entry file="file://$PROJECT_DIR$/resources/states.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="170" lean-forward="false" selection-start-line="0" selection-start-column="170" selection-end-line="0" selection-end-column="170" />
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workshop/SM_State_Editor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="e#2586#3297#0" expanded="false" />
+            <element signature="e#3336#3552#0" expanded="false" />
+            <element signature="e#3571#3721#0" expanded="false" />
+            <element signature="e#3843#4843#0" expanded="false" />
+            <element signature="e#7220#7526#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

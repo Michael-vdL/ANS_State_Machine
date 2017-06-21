@@ -5,8 +5,7 @@
 # 2.) Transition Editor Function Calls
 # 3.) Read and Write Function Calls
 
-from resources import *
-from SM_State_Editor import *
+from workshop.SM_State_Editor import *
 
 
 def workshop_setup():
@@ -22,7 +21,7 @@ def workshop_setup():
         choice = choice.lower()
         if choice == 'states':
             current_dict = get_state_dict()
-            new_dict = workshop_state_editor(current_dict)
+            new_dict = workshop_state_editor(current_dict, current_dict)
             save_state_dict(new_dict)
     else:
         # Segment for Error Checking System w/o resources
