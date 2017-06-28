@@ -18,12 +18,13 @@ import json
 # Branch = Modular Functionality, Update = Redesign of State Class called for a redesign of the state maker. Reworked the way it requested input, added requests to match new parameters 6.20.17
 
 # Takes in Current State Dictionary(For Validity Testing) Outputs Updated Dictionary with Valid States
+
 def workshop_state_editor(current_state_dict, start_state_dict):
     state_dict = {}  # Makes a fresh dictionary to edit
     print("#################################")
     print("Welcome to State Editor")
     print("#################################")
-    choice = input("What would you like to do? (New, Edit, Remove, Exit, No Save): ")
+    choice = input("What would you like to do? (New, Edit, Remove, List, Exit, No Save): ")
     choice = choice.lower()  # Forces lower_case on string, hopefully reducing input errors
 
     # To Leave State Creation
@@ -71,6 +72,14 @@ def workshop_state_editor(current_state_dict, start_state_dict):
         state_dict = remove_state(current_state_dict)
         return workshop_state_editor(state_dict, start_state_dict)
         #Error Check: State Existence
+
+    elif choice == 'list':
+        # Functionality:
+        # List the Current States in the Dictionary
+        list_state(current_state_dict)
+        return workshop_state_editor(current_state_dict, start_state_dict)
+
+
     else:
         print("Sorry, that's not an option.")
         state_dict.update(current_state_dict)
@@ -104,9 +113,16 @@ def new_state():
 def edit_state(current_state_dict, name):
     # 1.)Input a State Name
     if not name:
-        state_name = input("Please enter the name of the State you would like to edit: ")
+        state_name = input("Please enter the name of the State you would like to edit(list to view list of states): ")
         # Error Check: Existance Check
         return edit_state(current_state_dict, state_name)
+    elif name == 'list':
+        # Calling the List Function
+        list_state(current_state_dict)
+        return edit_state(current_state_dict, None)
+    elif not current_state_dict.__contains__(name):
+        print("Sorry that Name Does Not Exist, Please Try Again")
+        return edit_state(current_state_dict, None)
     else:
         state_name = name
         state_dict = current_state_dict
@@ -158,11 +174,34 @@ def edit_state(current_state_dict, name):
 def remove_state(state_dict):
     remove_state_dict = state_dict
     # 1.) Input a State Name
-    state_name = input("Please enter the name of the State you would like to remove: ")
+    state_name = input("Please enter the name of the State you would like to remove(list to view list of states): ")
     # Error Check: State Must Exist
-    remove_state_dict.pop(state_name)
-    print("...Removing State: {}...".format(state_name))
-    return remove_state_dict
+    if state_name == 'list':
+        list_state(state_dict)
+        return remove_state(state_dict)
+    elif not state_dict.__contains__(state_name):
+        print("Sorry, that state does not exist, please try again.")
+        return remove_state(state_dict)
+    else:
+        remove_state_dict.pop(state_name)
+        print("...Removing State: {}...".format(state_name))
+        return remove_state_dict
+
+
+def list_state(state_dict):
+    # Lists States and their Properties
+    if len(state_dict) == 0:
+        print("...No States to List...")
+        return
+    else:
+        counter = 1
+        for state_name in state_dict:
+            state = state_dict[state_name]
+            print("{}.) {} - Type: {} | Functions: {} | Transitions: {}".format(counter, state_name, state['type'],
+                                                                                state['func_perms'],
+                                                                                state['trans_perms']))
+            counter += 1
+        return
 
 
 #########################################

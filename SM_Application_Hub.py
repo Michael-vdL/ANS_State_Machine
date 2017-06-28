@@ -13,10 +13,10 @@ from objects.SM_Observer import *
 def hub_helper():
     print("Welcome to the ANS - Network State Machine: ")
     print("What would you like to do: ")
-    print("Option 0.) Leave Program")
     print("Option 1.) Start up an Observer")
     print("Option 2.) Enter Workshop Editor")
     print("Option 3.) Open the Testing Menu")
+    print("Option 0.) Leave Program")
     choice = input("Please Select an Option(Enter Number): ")
     if choice == '0':
         print("Thank you for using Network State Machine")

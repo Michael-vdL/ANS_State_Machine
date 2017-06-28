@@ -39,12 +39,14 @@ def workshop_setup():
         return
     elif choice == 'states':
         current_dict = get_state_dict()
-        new_dict = workshop_state_editor(current_dict, current_dict)
+        start_dict = get_state_dict()
+        new_dict = workshop_state_editor(current_dict, start_dict)
         save_state_dict(new_dict)
         return workshop_setup()
     elif choice == 'transitions':
         current_dict = get_trans_dict()
-        new_dict = workshop_transition_editor(current_dict, current_dict)
+        start_dict = get_trans_dict()
+        new_dict = workshop_transition_editor(current_dict, start_dict)
         save_trans_dict(new_dict)
         return workshop_setup()
     elif choice == 'validity':
