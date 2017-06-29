@@ -9,7 +9,6 @@ from workshop.SM_WorkShop import *
 from workshop.SM_Builder import *
 from objects.SM_Observer import *
 
-
 def hub_helper():
     print("Welcome to the ANS - Network State Machine: ")
     print("What would you like to do: ")
@@ -34,7 +33,6 @@ def hub_helper():
         print("Sorry that is not an Option, please try again.")
         return hub_helper()
 
-
 def observer_helper():
     state_dict = get_state_dict()
     trans_dict = get_trans_dict()
@@ -42,16 +40,13 @@ def observer_helper():
     print("Observer Built: {}".format(obsv.name))
     return
 
-
 def workshop_helper():
     print("...Entering Workshop...")
     workshop_intro()
     return
 
-
 def test_helper():
     return
-
 
 if __name__ == '__main__':
     hub_helper()

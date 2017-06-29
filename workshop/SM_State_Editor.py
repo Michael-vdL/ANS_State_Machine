@@ -103,7 +103,7 @@ def new_state():
     state_functions = state_functions.replace(' ', '')
     state_functions = state_functions.split(',')
     # 4.)Input Transfer Permissions
-    state_transfer = input("Please Enter the Transitions this state has access t(seperated by comas): ")
+    state_transfer = input("Please Enter the Transitions this state has access to(separated by comas): ")
     state_transfer = state_transfer.replace(' ', '')
     state_transfer = state_transfer.split(',')
     print("...Adding New State: {}...".format(state_name))
