@@ -1,12 +1,14 @@
 # Proto
 
 
+
+
 def workshop_transition_editor(current_trans_dict, start_trans_dict):
     trans_dict = {}
     print("#################################")
     print("Welcome to Transition Editor")
     print("#################################")
-    choice = input("What would you like to do? (New, Edit, Remove, Exit, No Save): ")
+    choice = input("What would you like to do? (New, Edit, Remove, List, Exit, No Save): ")
     choice = choice.lower()
 
     if choice == 'exit':
@@ -51,6 +53,12 @@ def workshop_transition_editor(current_trans_dict, start_trans_dict):
         trans_dict = remove_transition(current_trans_dict)
         return workshop_transition_editor(trans_dict, start_trans_dict)
 
+    elif choice == 'list':
+        # Functionality:
+        # Lists all transitions
+        list_transition(current_trans_dict)
+        return workshop_transition_editor(current_trans_dict, start_trans_dict)
+
     else:
         print("Sorry, that's not an option.")
         trans_dict.update(current_trans_dict)
@@ -74,9 +82,16 @@ def new_transition():
 def edit_transition(current_trans_dict, name):
     # 1.)Input a Transition name
     if not name:
-        trans_name = input("Please enter the name of the Transitions you would like to edit: ")
+        trans_name = input(
+            "Please enter the name of the Transitions you would like to edit(list to view list of transitions): ")
         # Error CheckL Existance Check
         return edit_transition(current_trans_dict, trans_name)
+    elif name == 'list':
+        list_transition(current_trans_dict)
+        return edit_transition(current_trans_dict, None)
+    elif not current_trans_dict.__contains__(name):
+        print("Sorry that Name Does Not Exist, Please Try Again")
+        return edit_transition(current_trans_dict, None)
     else:
         trans_name = name
         trans_dict = current_trans_dict
@@ -117,8 +132,29 @@ def edit_transition(current_trans_dict, name):
 def remove_transition(trans_dict):
     remove_trans_dict = trans_dict
     # 1.)Input Transition Name
-    trans_name = input("Please enter the name of the Transition you would like to remove: ")
+    trans_name = input(
+        "Please enter the name of the Transition you would like to remove(list to view list of transitions): ")
     # Error Check: Existence Check
-    remove_trans_dict.pop(trans_name)
-    print("...Removing State: {}...".format(trans_name))
-    return remove_trans_dict
+    if trans_name == 'list':
+        list_transition(trans_dict)
+        return remove_transition(trans_dict)
+    elif not trans_dict.__contains__(trans_name):
+        print("Sorry, that state does not exist, please try again.")
+        return remove_transition(trans_dict)
+    else:
+        remove_trans_dict.pop(trans_name)
+        print("...Removing State: {}...".format(trans_name))
+        return remove_trans_dict
+
+
+def list_transition(trans_dict):
+    if len(trans_dict) == 0:
+        print("...No Transitions to List...")
+        return
+    else:
+        counter = 1
+        for trans_name in trans_dict:
+            trans = trans_dict[trans_name]
+            print("{}.) {} - Destination: {} | Function: {}".format(counter, trans_name, trans['dest'], trans['func']))
+            counter += 1
+        return

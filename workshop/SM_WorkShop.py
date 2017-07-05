@@ -39,12 +39,14 @@ def workshop_setup():
         return
     elif choice == 'states':
         current_dict = get_state_dict()
-        new_dict = workshop_state_editor(current_dict, current_dict)
+        start_dict = get_state_dict()
+        new_dict = workshop_state_editor(current_dict, start_dict)
         save_state_dict(new_dict)
         return workshop_setup()
     elif choice == 'transitions':
         current_dict = get_trans_dict()
-        new_dict = workshop_transition_editor(current_dict, current_dict)
+        start_dict = get_trans_dict()
+        new_dict = workshop_transition_editor(current_dict, start_dict)
         save_trans_dict(new_dict)
         return workshop_setup()
     elif choice == 'validity':
@@ -80,7 +82,6 @@ def get_trans_dict():
 def save_state_dict(saving_dict):
     with open('resources/states.txt', 'w') as outfile:
         json.dump(saving_dict, outfile)
-
 
 def save_trans_dict(saving_dict):
     with open('resources/transitions.txt', 'w') as outfile:
