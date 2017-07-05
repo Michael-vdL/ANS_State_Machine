@@ -8,6 +8,7 @@
 from workshop.SM_WorkShop import *
 from workshop.SM_Builder import *
 from objects.SM_Observer import *
+from gui.GUI_Application_Hub import *
 
 def hub_helper():
     print("Welcome to the ANS - Network State Machine: ")

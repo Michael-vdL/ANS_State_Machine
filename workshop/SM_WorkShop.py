@@ -83,7 +83,6 @@ def save_state_dict(saving_dict):
     with open('resources/states.txt', 'w') as outfile:
         json.dump(saving_dict, outfile)
 
-
 def save_trans_dict(saving_dict):
     with open('resources/transitions.txt', 'w') as outfile:
         json.dump(saving_dict, outfile)

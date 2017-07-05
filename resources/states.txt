@@ -1,1 +1,1 @@
-{"Test": {"type": "start", "func_perms": ["enter"], "trans_perms": ["leave"]}}
+{"Test": {"type": "new", "func_perms": ["yes", "no"], "trans_perms": ["okay"]}}
