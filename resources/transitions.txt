@@ -1,1 +1,1 @@
-{"Exit": {"dest": "Add", "func": "Remove"}, "Test": {"dest": "Healthy", "func": "Monitor"}}
+{"to_healthy": {"dest": "Healthy", "func": "is_healthy"}}

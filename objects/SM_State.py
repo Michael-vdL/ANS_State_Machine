@@ -17,6 +17,7 @@ class State(object):
         self.nodes_in_state.append(node)
 
     def remove_node(self, node):
+        print(node)
         self.nodes_in_state.remove(node)
 
     #Transition Management Methods

@@ -1,32 +1,81 @@
 #!/usr/bin/python
 
+from objects.SM_State import *
+from objects.SM_Transition import *
+from objects.SM_Node import *
+
+
+def get_dict(file_name):
+    import json
+    with open('resources/{}.txt'.format(file_name)) as resource_file:
+        dict = json.load(resource_file)
+    return dict
+
 class Observer:
-    def __init__(self, name, state_list, trans_list):
-        self.name = name  # Probably useless variable, incase multiple observers become useful
-        self.states = state_list  # List of states for observer
-        self.transitions = trans_list  # List of transitions for observer
+    def __init__(self):
+        # Initial Observer Setup
+        self.states, self.transitions = self.network_objects()
+        # Saves Nodes
+        self.node_location_dict = {}
+        for state in self.states:  # Goes through each state in observer
+            temp_dict = {
+                state.name: state.nodes_in_state}  # makes an entry with the states name, and the nodes in the state
+            self.node_location_dict.update(temp_dict)  # adds said entry
 
-    def monitor_network_json(self):
-        # Functionality: Monitors the network json for updates
-        # 1.) Determines the nature of the update
-        # 2.) Determines which state the update effects
-        # 3.) Designates which function will handle the update
-        return
+    # Refresh Function for network objects
+    def get_network_objects(self):
+        self.states, self.transitions = self.network_objects()  # Refreshes objects
+        for state in self.states:  # Goes through each state
+            for state_name in self.node_location_dict:  # Goes through the node_location_dictionary
+                if state_name == state.name:  # If the state had node before the refresh
+                    state.nodes_in_state = self.node_location_dict[state_name]  #Add them back into the state
 
-    def get_network(self):
-        # Functionality: Sets up a Mininet network for testing
+    def network_objects(self):
+        # Get Dictionary Data
+        states_dict = get_dict('states')
+        trans_dict = get_dict('transitions')
+        # Make States
+        state_list = self.state_objects(states_dict)
+        # Make Transitions
+        trans_list = self.transition_objects(trans_dict, state_list)
 
-        return
+        return state_list, trans_list
 
-    def assign_new_node(self):
-        # Funcationality: When new nodes are discovered it assigns them to start state.
+    def state_objects(self, states_dict):
+        # Functionality: Make State Objects, add them to a list
+        state_list = []
+        for state_name in states_dict:
+            current_state = states_dict[state_name]
+            state_type = current_state['type']
+            state_trans = current_state['trans_perms']
+            state_funcs = current_state['func_perms']
+            state_obj = State(state_name, state_type, state_trans, state_funcs)
+            state_list.append(state_obj)
+        return state_list
 
-        return
+    def transition_objects(self, trans_dict, state_list):
+        trans_list = []
+        for trans_name in trans_dict:
+            current_trans = trans_dict[trans_name]
+            trans_dest = current_trans['dest']
+            for state in state_list:
+                if state.name == trans_dest:
+                    trans_state = state
+            trans_func = current_trans['func']
+            trans_obj = Transition(trans_name, trans_state, trans_func)
+            trans_list.append(trans_obj)
+        return trans_list
 
-    def running(self):
-        # Functionality: Controls everything the observer does
-        # Currently a Manual Interactive method --> Will be automatic and controlled from elsewhere
-        return
+    def run_transition(self, start_state, node, transition):
+        print("Possibly 1")
+        destination_state = transition.destination
+        print("Possibly 2")
+        start_state.remove_node(node)
+        print("Possibly 3")
+        destination_state.add_node(node)
+        print("Possibly 4")
+
+
 
 
 """""
