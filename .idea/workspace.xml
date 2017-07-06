@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b10fa42-7d8a-4b26-969c-3c96c58f015c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SM_Starter_GUI.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Application_Hub.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Workshop_Hub.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/SM_Application_Hub.py" afterPath="$PROJECT_DIR$/SM_Starter_CLI.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Mininet_Hub.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Network_Map.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Test_Hub.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/SM_Node.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Application_Hub.py" afterPath="$PROJECT_DIR$/gui/GUI_Application_Hub.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" afterPath="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_Observer.py" afterPath="$PROJECT_DIR$/objects/SM_Observer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_State.py" afterPath="$PROJECT_DIR$/objects/SM_State.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/states.txt" afterPath="$PROJECT_DIR$/resources/states.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/transitions.txt" afterPath="$PROJECT_DIR$/resources/transitions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/SM_WorkShop.py" afterPath="$PROJECT_DIR$/workshop/SM_WorkShop.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,104 +21,100 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="GUI_Workshop_Hub.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Hub.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="629">
-                    <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-                    <folding>
-                      <element signature="e#50#60#0" expanded="true" />
-                      <element signature="e#346#453#0" expanded="false" />
-                      <element signature="e#2256#2291#0" expanded="false" />
-                      <element signature="e#2445#3438#0" expanded="false" />
-                      <element signature="e#3554#4386#0" expanded="false" />
-                      <element signature="e#4434#5241#0" expanded="false" />
-                      <element signature="e#5338#5752#0" expanded="false" />
-                      <element signature="e#5795#6229#0" expanded="false" />
-                      <element signature="e#6266#6287#0" expanded="false" />
-                      <element signature="e#6342#7201#0" expanded="false" />
-                      <element signature="e#7239#7969#0" expanded="false" />
-                      <element signature="e#8005#8134#0" expanded="false" />
-                      <element signature="e#8255#8808#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="states.txt" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/resources/states.txt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="SM_State.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="398">
-                    <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="GUI_Workshop_Adding_Widget.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="412">
-                    <caret line="110" column="94" lean-forward="false" selection-start-line="110" selection-start-column="94" selection-end-line="110" selection-end-column="94" />
-                    <folding>
-                      <element signature="e#350#423#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="GUI_Observer_Hub.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/gui/GUI_Observer_Hub.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="803">
-                    <caret line="79" column="57" lean-forward="false" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
-                    <folding>
-                      <element signature="e#37#74#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="states.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/states.txt">
+      <file leaf-file-name="GUI_Application_Hub.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/GUI_Application_Hub.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+            <state relative-caret-position="340">
+              <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SM_State.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-833">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI_Application_Hub.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gui/GUI_Application_Hub.py">
+      <file leaf-file-name="GUI_Test_Hub.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gui/GUI_Test_Hub.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-101">
-              <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="473">
+              <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SM_Transition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/SM_Transition.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transitions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/transitions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUI_Network_Map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/GUI_Network_Map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUI_Mininet_Hub.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/GUI_Mininet_Hub.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SM_Node.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/SM_Node.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUI_Workshop_Adding_Widget.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="111" column="94" lean-forward="false" selection-start-line="111" selection-start-column="94" selection-end-line="111" selection-end-column="94" />
+              <folding>
+                <element signature="e#357#430#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,9 +147,7 @@
         <option value="$PROJECT_DIR$/SM_State_Editor.py" />
         <option value="$PROJECT_DIR$/objects/SM_Function.py" />
         <option value="$PROJECT_DIR$/objects/SM_Transition.py" />
-        <option value="$PROJECT_DIR$/objects/SM_State.py" />
         <option value="$PROJECT_DIR$/workshop/SM_Builder.py" />
-        <option value="$PROJECT_DIR$/objects/SM_Observer.py" />
         <option value="$PROJECT_DIR$/workshop/SM_Policy_Hub.py" />
         <option value="$PROJECT_DIR$/workshop/SM_Transition_Editor.py" />
         <option value="$PROJECT_DIR$/workshop/SM_State_Editor.py" />
@@ -162,17 +157,24 @@
         <option value="$PROJECT_DIR$/SM_Starter_GUI.py" />
         <option value="$PROJECT_DIR$/gui/GUI_Table.py" />
         <option value="$PROJECT_DIR$/workshop/SM_WorkShop.py" />
-        <option value="$PROJECT_DIR$/resources/transitions.txt" />
         <option value="$PROJECT_DIR$/gui/GUI_Workshop_Hub.py" />
         <option value="$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py" />
+        <option value="$PROJECT_DIR$/resources/transitions.txt" />
+        <option value="$PROJECT_DIR$/gui/GUI_Network_Map.py" />
+        <option value="$PROJECT_DIR$/objects/SM_Node.py" />
+        <option value="$PROJECT_DIR$/gui/GUI_MIninet_Hub.py" />
+        <option value="$PROJECT_DIR$/gui/GUI_Mininet_Hub.py" />
         <option value="$PROJECT_DIR$/resources/states.txt" />
         <option value="$PROJECT_DIR$/gui/GUI_Application_Hub.py" />
         <option value="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" />
+        <option value="$PROJECT_DIR$/objects/SM_State.py" />
+        <option value="$PROJECT_DIR$/objects/SM_Observer.py" />
+        <option value="$PROJECT_DIR$/gui/GUI_Test_Hub.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2319" />
+    <option name="x" value="1359" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -191,8 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,20 +202,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ANS_State_Machine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ANS_State_Machine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ANS_State_Machine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workshop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,6 +249,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -467,8 +455,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.SM_Starter_GUI" />
-        <item index="1" class="java.lang.String" itemvalue="Python.GUI_Workshop_Adding_Widget" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in SM_Starter_CLI.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in SM_Starter_CLI.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.GUI_Workshop_Adding_Widget" />
         <item index="3" class="java.lang.String" itemvalue="Python.SM_Application_Hub" />
         <item index="4" class="java.lang.String" itemvalue="Python.SM_WorkShop (1)" />
       </list>
@@ -476,6 +464,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -527,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498744256719</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version 0.5 - ANS Network State Machine&#10;Added Lots of GUI Code&#10;Working on Having the Observer Refresh to Changes">
+      <created>1499288822291</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1499288822291</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -537,21 +535,25 @@
     <history-entry file="Unittests_in_SM_Start_CLI_py - 2017.07.03 at 14h 59m 02s.xml">
       <configuration name="Unittests in SM_Start_CLI.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_SM_Starter_CLI_py - 2017.07.06 at 09h 58m 41s.xml">
+      <configuration name="Unittests in SM_Starter_CLI.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2319" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="1359" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12943633" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28183717" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47949526" sideWeight="0.21083455" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34685165" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21878335" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -571,7 +573,8 @@
     <MESSAGE value="Version 0.3 - ANS Network State Machine&#10;Lots of file Management&#10;--&gt; Deleted Useless Outdated Files&#10;--&gt; Moved Files into Logical Directories&#10;&#10;Finished Functionality For Transition and State Editor&#10;--&gt; Need to Add Logic Error Handling&#10;&#10;SM_Workshop socketed for Transitions and State Editor&#10;--&gt; Need to add SM Validity Tester and Maybe Initial Setup Functionality&#10;&#10;Lots of Documentation for SM_Workshop files" />
     <MESSAGE value="Version 0.4 - ANS Network State Machine&#10;Fixed Bug: No Save functionality not working with Remove and Edit features&#10;&#10;Added Feature: List - Printing list of states or transition based what youre editing&#10;&#10;Added a SM_Policy_Hub file that has details on what I am currently thinking with the implementation of Policy/Realms in Policy" />
     <MESSAGE value="Version 0.4b - ANS Network State Machine&#10;Fixed Bug: No Save functionality not working with Remove and Edit features&#10;&#10;Added Feature: List - Printing list of states or transition based what youre editing&#10;&#10;Added a SM_Policy_Hub file that has details on what I am currently thinking with the implementation of Policy/Realms in Policy&#10;&#10;Not many Changes over the first commit of this, just looking to branch current for GUI Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4b - ANS Network State Machine&#10;Fixed Bug: No Save functionality not working with Remove and Edit features&#10;&#10;Added Feature: List - Printing list of states or transition based what youre editing&#10;&#10;Added a SM_Policy_Hub file that has details on what I am currently thinking with the implementation of Policy/Realms in Policy&#10;&#10;Not many Changes over the first commit of this, just looking to branch current for GUI Testing" />
+    <MESSAGE value="Version 0.5 - ANS Network State Machine&#10;Added Lots of GUI Code&#10;Working on Having the Observer Refresh to Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.5 - ANS Network State Machine&#10;Added Lots of GUI Code&#10;Working on Having the Observer Refresh to Changes" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -595,9 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#30#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,9 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,9 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,9 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1462">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,9 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding>
-            <element signature="e#212#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,13 +737,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APIs/SM_API_Function.py" />
     <entry file="file://$PROJECT_DIR$/SM_FIle_Unloader.py" />
-    <entry file="file://$PROJECT_DIR$/resources/update.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SM_Maker.py" />
     <entry file="file://$PROJECT_DIR$/SM_Prototype_Driver.py" />
     <entry file="file://$PROJECT_DIR$/SM_Tester.py">
@@ -773,20 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objects/SM_Transition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workshop/SM_Policy_Hub.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -795,13 +762,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/policy" />
-    <entry file="file://$PROJECT_DIR$/resources/policy.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/GUI_MainWindow.py" />
     <entry file="file://$PROJECT_DIR$/workshop/SM_Transition_Editor.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -839,17 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#30#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/transitions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="91" lean-forward="false" selection-start-line="0" selection-start-column="91" selection-end-line="0" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,46 +806,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
           <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#212#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
+    <entry file="file://$PROJECT_DIR$/resources/policy.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Hub.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-          <folding>
-            <element signature="e#50#60#0" expanded="true" />
-            <element signature="e#346#453#0" expanded="false" />
-            <element signature="e#2256#2291#0" expanded="false" />
-            <element signature="e#2445#3438#0" expanded="false" />
-            <element signature="e#3554#4386#0" expanded="false" />
-            <element signature="e#4434#5241#0" expanded="false" />
-            <element signature="e#5338#5752#0" expanded="false" />
-            <element signature="e#5795#6229#0" expanded="false" />
-            <element signature="e#6266#6287#0" expanded="false" />
-            <element signature="e#6342#7201#0" expanded="false" />
-            <element signature="e#7239#7969#0" expanded="false" />
-            <element signature="e#8005#8134#0" expanded="false" />
-            <element signature="e#8255#8808#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/states.txt">
+    <entry file="file://$PROJECT_DIR$/resources/update.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -904,29 +828,113 @@
     <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
-          <caret line="110" column="94" lean-forward="false" selection-start-line="110" selection-start-column="94" selection-end-line="110" selection-end-column="94" />
+          <caret line="111" column="94" lean-forward="false" selection-start-line="111" selection-start-column="94" selection-end-line="111" selection-end-column="94" />
           <folding>
-            <element signature="e#350#423#0" expanded="true" />
+            <element signature="e#357#430#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/GUI_Mininet_Hub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/GUI_Network_Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/transitions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/GUI_Observer_Hub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="79" column="57" lean-forward="false" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
+        <state relative-caret-position="293">
+          <caret line="76" column="82" lean-forward="false" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="82" />
           <folding>
-            <element signature="e#37#74#0" expanded="true" />
+            <element signature="e#38#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/states.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/GUI_Application_Hub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/GUI_Workshop_Hub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_Transition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+          <folding>
+            <element signature="e#19#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/GUI_Test_Hub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="52" column="22" lean-forward="false" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
