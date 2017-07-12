@@ -1,1 +1,1 @@
-{"New": {"type": "start", "func_perms": ["is_healthy"], "trans_perms": ["to_healthy"]}, "Healthy": {"type": "normal", "func_perms": ["end"], "trans_perms": ["normal"]}}
+{"New": {"type": "start", "func_perms": ["is_healthy"], "trans_perms": ["to_healthy"]}, "Healthy": {"type": "normal", "func_perms": ["end"], "trans_perms": ["to_quarantine"]}}

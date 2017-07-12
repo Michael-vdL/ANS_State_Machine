@@ -6,6 +6,8 @@
 # 1.) Error handling to manage improper input
 # 2.) Drop down window for type, maybe for selecting already available destination?
 
+# !/usr/bin/python
+
 from PyQt5.QtWidgets import QFormLayout, QLineEdit, QApplication, QDialog
 
 from gui.GUI_Workshop_Hub import *
