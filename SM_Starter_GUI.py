@@ -1,4 +1,5 @@
 # Needed to inherit Resources
+# !/usr/bin/python
 
 import sys
 from gui.GUI_Application_Hub import *

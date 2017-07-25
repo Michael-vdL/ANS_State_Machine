@@ -5,6 +5,8 @@
 # 3.) Testing Tools
 # foo_helper() methods are just drivers for different options
 
+# !/usr/bin/python
+
 from workshop.SM_WorkShop import *
 from workshop.SM_Builder import *
 from objects.SM_Observer import *

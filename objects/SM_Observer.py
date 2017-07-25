@@ -3,6 +3,7 @@
 from objects.SM_State import *
 from objects.SM_Transition import *
 from objects.SM_Node import *
+from objects.SM_Network import *
 
 
 def get_dict(file_name):
@@ -14,6 +15,7 @@ def get_dict(file_name):
 class Observer:
     def __init__(self):
         # Initial Observer Setup
+        self.network = None
         self.states, self.transitions = self.network_objects()
         # Saves Nodes
         self.node_location_dict = {}
@@ -21,6 +23,12 @@ class Observer:
             temp_dict = {
                 state.name: state.nodes_in_state}  # makes an entry with the states name, and the nodes in the state
             self.node_location_dict.update(temp_dict)  # adds said entry
+
+    ######################################
+    # Object Generation
+    ######################################
+    def set_network(self, net):
+        self.network = net
 
     # Refresh Function for network objects
     def get_network_objects(self):
@@ -66,14 +74,27 @@ class Observer:
             trans_list.append(trans_obj)
         return trans_list
 
+    ############################################
+    # Operational Functions
+    ############################################
+    def observe(self):
+        # Monitoring Function
+        while (True):
+            print('Monitored')
+            # Look for triggers
+
+    def trigger_hit(self):
+        # Functionality
+        # When a trigger is hit, send run_transition the data for which node hit the trigger, and what transition the trigger dictates
+        print("Trigger")
+
     def run_transition(self, start_state, node, transition):
-        print("Possibly 1")
         destination_state = transition.destination
-        print("Possibly 2")
         start_state.remove_node(node)
-        print("Possibly 3")
         destination_state.add_node(node)
-        print("Possibly 4")
+        self.get_network_objects()
+        print('Transition From {} to {}'.format(start_state.name, transition.destination.name))
+        print('Transition Complete')
 
 
 

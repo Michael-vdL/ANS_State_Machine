@@ -1,7 +1,6 @@
+#!/usr/bin/python
+
 class Node():
-    def __init__(self, name, description, type, links):
+    def __init__(self, name, connections):
         self.name = name
-        self.description = description
-        self.type = type
-        self.links_list = links
-        print("Node Class")
+        self.connector_list = connections

@@ -1,6 +1,6 @@
 # Main Tab for the Observer Object
 
-
+# !/usr/bin/python
 
 from gui.GUI_Application_Hub import *
 from gui.GUI_Workshop_Hub import *
@@ -99,7 +99,7 @@ class State_Widget_GUI(QWidget):
 
         # Add nodes to list widget
         for node in state.nodes_in_state:
-            node_item = QListWidgetItem(node)
+            node_item = QListWidgetItem(node.name)
             list_view.addItem(node_item)
         # Add QT Items to layout
         vbox_state.addWidget(lbl_name)
