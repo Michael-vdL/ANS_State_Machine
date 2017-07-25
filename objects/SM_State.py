@@ -18,6 +18,7 @@ class State(object):
     # 1.) add_Node
     #2.) remove_node
     def add_node(self, node):
+        self.enforce_policy(node)
         self.nodes_in_state.append(node)
 
     def remove_node(self, node):
@@ -30,3 +31,7 @@ class State(object):
 
     def add_transitions(self, node):
         print("Placeholder - Add Permissions")
+
+    # Realms, Policy, Roles, Enforcement
+    def enforce_policy(self, node):
+        print('Enforcing Policy on {}'.format(node.name))
