@@ -1,1 +1,0 @@
-{"to_healthy": {"dest": "Healthy", "func": "is_healthy"}, "to_quarantine": {"dest": "Quarantine", "func": "is_quarantine"}}

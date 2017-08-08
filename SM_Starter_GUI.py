@@ -3,7 +3,7 @@
 
 import sys
 from gui.GUI_Application_Hub import *
-
+from bin.junos_information_collector import *
 
 def run_app():
     app = QApplication(sys.argv)
@@ -12,4 +12,5 @@ def run_app():
 
 
 if __name__ == '__main__':
+    # information_collector() #Disable so testing doesn't take a year to load
     run_app()

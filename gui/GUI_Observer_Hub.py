@@ -22,9 +22,13 @@ class Observer_Hub_GUI(QWidget):
         self.states_layout = QHBoxLayout()
 
         # Object Initialization
+        self.btn_collect_and_compare = QPushButton('Collect and Compare', self)
         self.btn_refresh = QPushButton('Refresh', self)
+        self.btn_collect_and_compare.resize(self.btn_collect_and_compare.sizeHint())
         self.btn_refresh.resize(self.btn_refresh.sizeHint())
+        self.btn_collect_and_compare.clicked.connect(self.click_collect_and_compare)
         self.btn_refresh.clicked.connect(self.click_refresh)
+        self.top_layout.addWidget(self.btn_collect_and_compare)
         self.top_layout.addWidget(self.btn_refresh)
 
         self.states_list = self.obsv.states
@@ -49,17 +53,19 @@ class Observer_Hub_GUI(QWidget):
     def display_states(self):
         # Functionality:
         # 1.) Displays All States onto GUI
-        display_dict = {}
-        counter = 0
-        for state in self.states_list:
-            temp_dict = {counter: State_Widget_GUI(state)}
-            display_dict.update(temp_dict)
-            counter += 1
+        display_dict = {}  # Holds all States that are displayed
+        counter = 0  # Increments Counter
+        for state in self.states_list:  # Goes through each state in the state list
+            temp_dict = {
+                counter: State_Widget_GUI(state)}  # makes a temporary dictionary of counter and a Widget, to hold
+            display_dict.update(temp_dict)  # Adds that dictionary entry to entire dict
+            counter += 1  # Increments counter
+        for display in display_dict:  # Goes through each display
+            self.states_layout.addWidget(display_dict[display])  # Adds the widget of each display to the layout
+        return display_dict  # Returns the display dict
 
-        for display in display_dict:
-            self.states_layout.addWidget(display_dict[display])
-
-        return display_dict
+    def click_collect_and_compare(self):
+        self.obsv.collect_and_compare()
 
     def click_refresh(self):
         # Remove Current States_Layout from top_layout
@@ -82,8 +88,6 @@ class Observer_Hub_GUI(QWidget):
         self.top_layout.addLayout(self.states_layout, 1)  # ReAdds the Layout to the Top_Layout
         self.repaint()  # Maybe not needed but it works
         self.update()  # Maybe not needed but it works
-        print("Updates Finally Work")
-
 
 class State_Widget_GUI(QWidget):
     # Functionality
@@ -93,16 +97,54 @@ class State_Widget_GUI(QWidget):
         super().__init__()
 
         vbox_state = QVBoxLayout()
-        list_view = QListWidget()
+        tree_view = QTreeWidget()
         lbl_name = QLabel('State: {}'.format(state.name))
         lbl_type = QLabel('Type: {}'.format(state.type))
 
-        # Add nodes to list widget
+        ######IMPORTANT#######
+        # Going to need a way to have users and interfaces in different states than their parent device, but show that they are of that device (have device in the state, make name grey?)
+
+        # Gets All the Devices in the State
+        devices_in_state = {}
         for node in state.nodes_in_state:
-            node_item = QListWidgetItem(node.name)
-            list_view.addItem(node_item)
+            if node.node_type == 'Device':
+                tmp_dict = {node.name: {'interfaces': [], 'users': []}}
+                devices_in_state.update(tmp_dict)
+
+        # For Each Device, Finds list of users and interfaces also in the state
+        for dev in devices_in_state:
+            users_in_dev = []
+            iface_in_dev = []
+            for node in state.nodes_in_state:
+                if node.node_type == 'User':
+                    users_in_dev.append(node.name)
+                elif node.node_type == 'Interface':
+                    iface_in_dev.append(node.name)
+            devices_in_state[dev]['interfaces'] = iface_in_dev
+            devices_in_state[dev]['users'] = users_in_dev
+
+        # Adds them to display:
+
+        for dev in devices_in_state:
+            device = QTreeWidgetItem([dev])  # Top of Tree
+            user_tab = QTreeWidgetItem(["Users: "])  # First Branch of Tree
+            interface_tab = QTreeWidgetItem(["Interfaces: "])  # Same Level as User Tab
+            # Make and Add Children to User_tab
+            for user in devices_in_state[dev]['users']:
+                user_item = QTreeWidgetItem([user])
+                user_tab.addChild(user_item)
+            for interface in devices_in_state[dev]['interfaces']:
+                interface_item = QTreeWidgetItem([interface])
+                interface_tab.addChild(interface_item)
+            device.addChild(user_tab)
+            device.addChild(interface_tab)
+            tree_view.addTopLevelItem(device)
+
+        # Edit Tree View
+        tree_view.header().close()
+
         # Add QT Items to layout
         vbox_state.addWidget(lbl_name)
         vbox_state.addWidget(lbl_type)
-        vbox_state.addWidget(list_view)
+        vbox_state.addWidget(tree_view)
         self.setLayout(vbox_state)

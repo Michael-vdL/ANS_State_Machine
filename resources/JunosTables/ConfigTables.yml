@@ -1,0 +1,60 @@
+##YAML TABLES##
+#USER TABLES
+UserTable:
+  get: system/login/user
+  view: UserView
+
+UserView:
+  fields:
+    username: name
+    userfullname: full-name
+    userclass: class
+    userid: uid
+
+
+#Security Policy Table
+PolicyTable:
+  get: security/policies/policy
+  key:
+    - from-zone-name
+    - to-zone-name
+  view: PolicyView
+
+PolicyView:
+  fields:
+    from_zone_name: from-zone-name
+    to_zone_name: to-zone-name
+
+PolicyRuleTable:
+  get: security/policies/policy/policy
+  required_keys:
+    policy:
+      - from-zone-name
+      - to-zone-name
+  view: PolicyRuleView
+
+PolicyRuleView:
+  groups:
+    match: match
+    then: then
+  fields_match:
+    match_src: source-address
+    match_dst: destination-address
+    match_app: application
+  fields_then:
+    log_init: { log/session-init: flag }
+    action: deny | permit
+
+#Security Zone Table
+ZoneTable:
+  get: security/zones/security-zone
+  view: ZoneView
+
+ZoneView:
+  fields:
+    name: name
+    book: address-book
+    interfaces: interfaces/name
+    inboundservices: host-inbound-traffic/system-services/name
+    inboundprotocols: host-inbound-traffic/protocols/name
+

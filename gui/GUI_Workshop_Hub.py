@@ -19,14 +19,14 @@ def get_resources():
 
 def get_dict(file_name):
     import json
-    with open('resources/{}.txt'.format(file_name)) as resource_file:
+    with open('resources/{}.json'.format(file_name)) as resource_file:
         dict = json.load(resource_file)
     return dict
 
 
 def save_dict(file_name, saving_dict):
     import json
-    with open('resources/{}.txt'.format(file_name), 'w') as resource_file:
+    with open('resources/{}.json'.format(file_name), 'w') as resource_file:
         json.dump(saving_dict, resource_file)
 
 
@@ -202,7 +202,7 @@ class Workshop_Hub_GUI(QWidget):
 
         self.add_window.exec_()
         new_dict = self.add_window.new_item
-
+        self.add_window = None
         # 2.) Depending on what screen you are looking at, the method adds the new dict item to that dictionary
         if new_dict is None:
             print("No Input Given")

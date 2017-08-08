@@ -3,6 +3,9 @@
 
 # !/usr/bin/python
 
+from api.junos import junos_api as j_api
+
+
 class State(object):
     def __init__(self, state_name, state_type, trans_list, function_list):
         # Static State Variables
@@ -18,11 +21,11 @@ class State(object):
     # 1.) add_Node
     #2.) remove_node
     def add_node(self, node):
-        self.enforce_policy(node)
+        #self.enter_routine(node)
         self.nodes_in_state.append(node)
 
     def remove_node(self, node):
-        print(node)
+        #self.exit_routine(node)
         self.nodes_in_state.remove(node)
 
     # node transistions
@@ -33,5 +36,28 @@ class State(object):
         print("Placeholder - Add Permissions")
 
     # Realms, Policy, Roles, Enforcement
-    def enforce_policy(self, node):
-        print('Enforcing Policy on {}'.format(node.name))
+    def enter_routine(self, node):
+        print('Enforcing Enter Policy on {}'.format(node.name))
+        # for func in self.funcs:
+        # if func == 'interface_down':
+        # self.interface_down(node)
+        # elif func == 'get_policy':
+        # j_api.api_handler(node, func)
+        # elif func == 'check_health':
+        # j_api.api_handler(node, func)
+
+    def exit_routine(self, node):
+        print('Enforcing Exit Policy on {}'.format(node.name))
+        # for func in self.funcs:
+        # if func == 'interface_up':
+        # self.interface_up(node)
+
+    # STATE FUNCS
+
+    def interface_down(self, node):
+        print('Node has entered Quarantine - Cutting Connection')
+        j_api.disable_interface(node)
+
+    def interface_up(self, node):
+        print('Node has left Quarantine - Reenabling Connection')
+        j_api.enable_interface(node)

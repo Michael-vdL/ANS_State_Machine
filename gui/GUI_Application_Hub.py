@@ -40,7 +40,7 @@ class MyTableWidget(QWidget):
         self.tab_workshop = Workshop_Hub_GUI()
         self.tab_test_center = Test_Hub_GUI(self.obsv)
         self.tab_network_map = Juniper_GUI()
-        self.tab_mininet = Mininet_Hub_GUI(self.obsv)
+        # self.tab_mininet = Mininet_Hub_GUI(self.obsv)
         self.tabs.resize(300, 200)
 
         # Add Tabs to Tab Widget
@@ -48,7 +48,7 @@ class MyTableWidget(QWidget):
         self.tabs.addTab(self.tab_workshop, "Workshop")
         self.tabs.addTab(self.tab_test_center, "Test Center")
         self.tabs.addTab(self.tab_network_map, "Juniper")
-        self.tabs.addTab(self.tab_mininet, "Mininet")
+        #self.tabs.addTab(self.tab_mininet, "Mininet")
 
         # Create Tab Layouts
         self.tab_observer.layout = QVBoxLayout(self)

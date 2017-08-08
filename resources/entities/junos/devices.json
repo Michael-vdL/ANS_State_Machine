@@ -1,0 +1,17 @@
+{
+  "old-vSRX-1": {
+    "ip": "172.31.8.23",
+    "username": "root",
+    "password": "Tester123"
+  },
+  "old-vSRX-2": {
+    "ip": "172.31.8.24",
+    "username": "root",
+    "password": "Tester123"
+  },
+  "old-vSRX-3": {
+    "ip": "172.31.8.25",
+    "username": "root",
+    "password": "Tester123"
+  }
+}
