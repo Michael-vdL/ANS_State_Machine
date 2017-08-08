@@ -68,21 +68,21 @@ def get_resources():
 # Converts JSON to dictionary for editing
 def get_state_dict():
     import json
-    with open('resources/states.txt') as state_file:
+    with open('resources/states.json') as state_file:
         state_dict = json.load(state_file)
     return state_dict
 
 def get_trans_dict():
     import json
-    with open('resources/transitions.txt') as trans_file:
+    with open('resources/transitions.json') as trans_file:
         trans_dict = json.load(trans_file)
     return trans_dict
 
 # Converts Dict to JSON for saving
 def save_state_dict(saving_dict):
-    with open('resources/states.txt', 'w') as outfile:
+    with open('resources/states.json', 'w') as outfile:
         json.dump(saving_dict, outfile)
 
 def save_trans_dict(saving_dict):
-    with open('resources/transitions.txt', 'w') as outfile:
+    with open('resources/transitions.json', 'w') as outfile:
         json.dump(saving_dict, outfile)

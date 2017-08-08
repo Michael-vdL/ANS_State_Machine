@@ -1,0 +1,41 @@
+{
+  "New": {
+    "type": "start",
+    "func_perms": [
+      "get_policy",
+      "check_health"
+    ],
+    "trans_perms": [
+      "to_healthy",
+      "to_unhealthy"
+    ]
+  },
+  "Healthy": {
+    "type": "normal",
+    "func_perms": [
+      "end"
+    ],
+    "trans_perms": [
+      "to_quarantine"
+    ]
+  },
+  "Quarantine": {
+    "type": "normal",
+    "func_perms": [
+      "interface_down",
+      "interface_up"
+    ],
+    "trans_perms": [
+      "to_healthy"
+    ]
+  },
+  "Unhealthy": {
+    "type": "normal",
+    "func_perms": [
+      "end"
+    ],
+    "trans_perms": [
+      "to_quarantine"
+    ]
+  }
+}
