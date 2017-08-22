@@ -53,6 +53,15 @@ def information_collector():
         session.close()
 
 
+def configuration_collection(device):
+    host_name = device.name
+    dev_path = make_directory(host_name)
+    collect_interfaces(dev_path, device.session)
+    collect_users(dev_path, device.session)
+    collect_policy(dev_path, device.session)
+    collect_zones(dev_path, device.session)
+
+
 # Takes in a dev_hostname, makes directory for device
 def make_directory(dev_hostname):
     file_name = 'resources/entities/junos/{}'.format(dev_hostname)

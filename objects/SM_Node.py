@@ -6,4 +6,5 @@ class Node(object):
         self.parent = parent
         self.node_type = node_type
         self.health_status = True  # if true, healthy, if false, unhealthy
-        self.last_state = None
+        self.current_state = None
+        self.new = True

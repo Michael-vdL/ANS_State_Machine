@@ -1,14 +1,14 @@
 {
-  "to_healthy": {
-    "dest": "Healthy",
-    "func": "is_healthy"
+  "New_Interface": {
+    "destination": "New_Interface_State",
+    "trigger": "node_is_new_interface"
   },
-  "to_quarantine": {
-    "dest": "Quarantine",
-    "func": "is_quarantine"
+  "New_User": {
+    "destination": "New_User_State",
+    "trigger": "node_is_new_user"
   },
-  "to_unhealthy": {
-    "dest": "Unhealthy",
-    "func": "is_unhealthy"
+  "New_Device": {
+    "destination": "New_Device_State",
+    "trigger": "node_is_new_device"
   }
 }

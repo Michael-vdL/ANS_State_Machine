@@ -13,17 +13,24 @@ class Junos_Device(Node):
         self.ip = ip
         self.username = username
         self.password = password
+        self.session = self.get_ssh()
 
     def get_ssh(self):
         session = Device(self.ip, host=self.name, user=self.username, passwd=self.password)
+        return session
+
+    def open_session(self):
+        print("Device Is Opening Session")
         try:
-            session.open()
-            print(session.facts)
+            self.session.open()
+            print(self.session.facts)
         except ConnectError as err:
             print("Cannot connect to device: {}".format(err))
         except Exception as err:
             print(err)
-        return session
+
+    def close_session(self):
+        self.session.close()
 
     def get_file_path(self):
         path = 'resources/entities/junos/{}'.format(self.name)

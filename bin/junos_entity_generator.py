@@ -22,8 +22,6 @@ def gen_devices():
         username = dev_dict[dev_name]['username']  # Gets Username
         password = dev_dict[dev_name]['password']  # Gets Password
         junos_dev = Junos_Device(dev_name, ip, username, password)  # Makes Junos Device
-        if not junos_dev.last_state:  # Checks state_log for if there is a last device
-            junos_dev.last_state = "New"  # If not, it sets state to New
         dev_list.append(junos_dev)
     return dev_list
 
@@ -55,8 +53,6 @@ def gen_interfaces(dev):
                 logface_obj.last_state = "New"
             interface_list.append(logface_obj)
         """
-        if not phyface_obj.last_state:
-            phyface_obj.last_state = "New"
         interface_list.append(phyface_obj)
     return interface_list
 
@@ -73,7 +69,5 @@ def gen_users(dev):
         user_id = user_dict[user]['id']
         user_class = user_dict[user]['class']
         user_obj = Junos_User(dev, user, user_full_name, user_id, user_class)
-        if not user_obj.last_state:
-            user_obj.last_state = "New"
         user_list.append(user_obj)
     return user_list

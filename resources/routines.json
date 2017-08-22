@@ -1,0 +1,28 @@
+{
+  "make_new_user": {
+    "condition_list": [
+      "device users = 0"
+    ],
+    "input_list": [
+      "User Name",
+      "Full Name",
+      "User Class"
+    ],
+    "action_list": [
+      "set system login user * full-name * class *"
+    ]
+  },
+  "set_class_read-only_user": {
+    "condition_list": [
+      "User Power Abused"
+    ],
+    "input_list": [
+      "User Name",
+      "User Name"
+    ],
+    "action_list": [
+      "delete system login user * class",
+      "set system login user * class read-only"
+    ]
+  }
+}

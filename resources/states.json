@@ -2,40 +2,29 @@
   "New": {
     "type": "start",
     "func_perms": [
-      "get_policy",
-      "check_health"
+      "None"
     ],
     "trans_perms": [
-      "to_healthy",
-      "to_unhealthy"
+      "New_User",
+      "New_Device"
     ]
   },
-  "Healthy": {
+  "New_User_State": {
     "type": "normal",
     "func_perms": [
-      "end"
+      "None"
     ],
     "trans_perms": [
-      "to_quarantine"
+      "None"
     ]
   },
-  "Quarantine": {
+  "New_Device_State": {
     "type": "normal",
     "func_perms": [
-      "interface_down",
-      "interface_up"
+      "None"
     ],
     "trans_perms": [
-      "to_healthy"
-    ]
-  },
-  "Unhealthy": {
-    "type": "normal",
-    "func_perms": [
-      "end"
-    ],
-    "trans_perms": [
-      "to_quarantine"
+      "None"
     ]
   }
 }

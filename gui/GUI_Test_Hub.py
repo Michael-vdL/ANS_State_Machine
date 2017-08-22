@@ -33,12 +33,7 @@ class Test_Hub_GUI(QWidget):
         self.setLayout(self.top_layout)
 
     def click_run_transition_test(self):
-        for state in self.obsv.states:
-            if len(state.nodes_in_state) > 0:
-                node = state.nodes_in_state[r(0, len(state.nodes_in_state))]
-                transition = self.obsv.transitions[r(0, len(self.obsv.transitions) - 1)]
-                self.obsv.run_transition(state, node, transition)
-                return
+        self.obsv.check_triggers()
 
     def click_run_exit_quarantine_test(self):
         for state in self.obsv.states:

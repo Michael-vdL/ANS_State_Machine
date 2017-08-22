@@ -10,6 +10,7 @@ from gui.GUI_Observer_Hub import Observer_Hub_GUI
 from gui.GUI_Juniper import Juniper_GUI
 from gui.GUI_Mininet_Hub import Mininet_Hub_GUI
 from gui.GUI_Test_Hub import Test_Hub_GUI
+from gui.GUI_Routines import Routines_GUI
 
 from objects.SM_Observer import *
 
@@ -38,16 +39,18 @@ class MyTableWidget(QWidget):
         self.tabs = QTabWidget()
         self.tab_observer = Observer_Hub_GUI(self.obsv)
         self.tab_workshop = Workshop_Hub_GUI()
+        self.tab_routines = Routines_GUI(self.obsv)
         self.tab_test_center = Test_Hub_GUI(self.obsv)
-        self.tab_network_map = Juniper_GUI()
+        self.tab_juniper = Juniper_GUI()
         # self.tab_mininet = Mininet_Hub_GUI(self.obsv)
         self.tabs.resize(300, 200)
 
         # Add Tabs to Tab Widget
         self.tabs.addTab(self.tab_observer, "Observer")
         self.tabs.addTab(self.tab_workshop, "Workshop")
+        self.tabs.addTab(self.tab_routines, "Routines")
         self.tabs.addTab(self.tab_test_center, "Test Center")
-        self.tabs.addTab(self.tab_network_map, "Juniper")
+        self.tabs.addTab(self.tab_juniper, "Juniper")
         #self.tabs.addTab(self.tab_mininet, "Mininet")
 
         # Create Tab Layouts

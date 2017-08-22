@@ -6,7 +6,8 @@ from objects.SM_Node import *
 from objects.SM_Network import *
 from objects.junos.Junos_Node import *
 from bin.junos_entity_generator import *
-from bin.junos_information_collector import information_collector
+from bin.junos_information_collector import information_collector, configuration_collection
+from api.routines.user_routines import routine_handler
 
 
 def get_dict(file_name):
@@ -19,14 +20,12 @@ class Observer:
     def __init__(self):
         # Initial Observer Setup
         self.states, self.transitions = self.network_objects()
+        self.device_session_status = {'open': [], 'closed': []}
         self.entity_dict = self.get_net_devices()
+        self.assign_state_nodes()
         self.changes = []
         # Saves Nodes
-        self.node_location_dict = {}
-        for state in self.states:  # Goes through each state in observer
-            temp_dict = {
-                state.name: state.nodes_in_state}  # makes an entry with the states name, and the nodes in the state
-            self.node_location_dict.update(temp_dict)  # adds said entry
+
 
     ######################################
     # Object Generation
@@ -34,10 +33,8 @@ class Observer:
     # Refresh Function for network objects
     def get_network_objects(self):
         self.states, self.transitions = self.network_objects()  # Refreshes objects
-        for state in self.states:  # Goes through each state
-            for state_name in self.node_location_dict:  # Goes through the node_location_dictionary
-                if state_name == state.name:  # If the state had node before the refresh
-                    state.nodes_in_state = self.node_location_dict[state_name]  #Add them back into the state
+        self.assign_state_nodes()
+
 
     def network_objects(self):
         # Get Dictionary Data
@@ -47,7 +44,8 @@ class Observer:
         state_list = self.state_objects(states_dict)
         # Make Transitions
         trans_list = self.transition_objects(trans_dict, state_list)
-
+        for state in state_list:
+            state.get_transition_objects(trans_list)
         return state_list, trans_list
 
     def state_objects(self, states_dict):
@@ -66,12 +64,13 @@ class Observer:
         trans_list = []
         for trans_name in trans_dict:
             current_trans = trans_dict[trans_name]
-            trans_dest = current_trans['dest']
+            trans_dest = current_trans['destination']
+            trans_destination = None
             for state in state_list:
                 if state.name == trans_dest:
-                    trans_state = state
-            trans_func = current_trans['func']
-            trans_obj = Transition(trans_name, trans_state, trans_func)
+                    trans_destination = state
+            trans_trigger = current_trans['trigger']
+            trans_obj = Transition(trans_name, trans_destination, trans_trigger)
             trans_list.append(trans_obj)
         return trans_list
 
@@ -87,37 +86,37 @@ class Observer:
         entity_dict = {}  # Used to Store Devices
         dev_list = gen_devices()  # Gets an Initial list of devices
         for junos_dev in dev_list:  # Goes through each device on the list
+            self.device_session_status['closed'].append(junos_dev)
             dev_interfaces = self.get_dev_interfaces(junos_dev)  # Calls Method to collect all Interfaces for the Device
             dev_users = self.get_dev_users(junos_dev)
             tmp_dict = {junos_dev.name: {'dev_obj': junos_dev, 'interfaces': dev_interfaces, 'users': dev_users}}
             entity_dict.update(tmp_dict)
-            ###LINES BELOW NOT FULLY IMPLEMENTED, WANT TO ADD A LAST KNOWN STATE FILE THAT PROVIDES OBJECTS WITH THEIR ENTRY STATE
-            # An important bug that will show up is if you delete a state and its the last known state, make sure its set to New
-            dev_state = junos_dev.last_state  # Gets the Devices state
-            for state in self.states:  # Goes through list of states
-                if state.name == dev_state:  # Finds state that matches the state_name
-                    state.add_node(junos_dev)  # Adds a (node) value to State
         return entity_dict
 
     def get_dev_interfaces(self, device):
         interfaces = gen_interfaces(device)
-        for interface in interfaces:
-            for state in self.states:
-                if state.name == interface.last_state:
-                    state.add_node(interface)
         return interfaces
 
     # Passes Device to user generator to make a list of objects
     # Gets list of user objects and makes sure to add them to the correct states
     def get_dev_users(self, device):
         users = gen_users(device)
-        for user in users:
-            for state in self.states:
-                if state.name == user.last_state:
-                    state.add_node(user)
         return users
 
+    #################
+    # Object Getter #
+    #################
 
+    def get_dev_by_name(self, search_name):
+        for dev_name in self.entity_dict:
+            if search_name == dev_name:
+                device = self.entity_dict[dev_name]['dev_obj']
+                return device
+
+    def get_start_state(self):
+        for state in self.states:
+            if state.type == 'start':
+                return state
 
     ############################################
     # Operational Functions
@@ -128,18 +127,66 @@ class Observer:
             print('Monitored')
             # Look for triggers
 
-    def trigger_hit(self):
-        # Functionality
-        # When a trigger is hit, send run_transition the data for which node hit the trigger, and what transition the trigger dictates
-        print("Trigger")
+    def check_triggers(self):
+        # Runs through each state in the State Machine
+        for state in self.states:
+            print("Checking Triggers for {}".format(state.name))
+            state.check_transition_triggers()
 
-    def run_transition(self, start_state, node, transition):
+    def observe_transition(self, start_state, node, transition):
+        # Make Call to Run Transition
         destination_state = transition.destination
         start_state.remove_node(node)
         destination_state.add_node(node)
         self.get_network_objects()
         print('Transition From {} to {}'.format(start_state.name, transition.destination.name))
-        print('Transition Complete')
+
+    def assign_state_nodes(self):
+        for dev in self.entity_dict:
+            # Get and Add Devices
+            dev_obj = self.entity_dict[dev]['dev_obj']
+            self.add_node_to_state(dev_obj)
+            # Get and Add Device Interfaces
+            dev_interfaces = self.entity_dict[dev]['interfaces']
+            for iface in dev_interfaces:
+                self.add_node_to_state(iface)
+            # Get and Add Device Users
+            dev_users = self.entity_dict[dev]['users']
+            for user in dev_users:
+                self.add_node_to_state(user)
+
+    def add_node_to_state(self, node):
+        if not node.current_state:
+            start_state = self.get_start_state()
+            node.current_state = start_state
+            start_state.add_node(node)
+        else:
+            node.current_state.add_node(node)
+
+    #######################
+    # SSH CONTROL METHODS #
+    #######################
+
+    def open_and_move(self, device_name):
+        device = self.get_dev_by_name(device_name)
+        if self.device_session_status['open'].__contains__(device):
+            print("Session Currently Open")
+        else:
+            device.open_session()
+            self.device_session_status['closed'].remove(device)
+            self.device_session_status['open'].append(device)
+            print("Session to {} is now Open.".format(device_name))
+
+    def close_and_move(self, device_name):
+        device = self.get_dev_by_name(device_name)
+        if self.device_session_status['closed'].__contains__(device):
+            print("Session is Currently Closed")
+        else:
+            device.session.close()
+            self.device_session_status['open'].remove(device)
+            self.device_session_status['closed'].append(device)
+            print("Session to {} is now Closed.".format(device_name))
+
 
     #############################
     # UPDATE COLLECTION METHODS #
@@ -149,7 +196,13 @@ class Observer:
         # 1.) Saves old Dictionaries
         old_dict = self.collect()  # Collects information prior to update
         # 2.) Runs Information Collector to gather more information
-        information_collector()  # Call information collector to gather update information on devices
+        # For loop that uses only open sessions to gather information
+        for device in self.device_session_status['open']:
+            print("Collecting Information on {}".format(device.name))
+            configuration_collection(device)
+            print("Configuration Collected")
+        # Information Collector was used to Collect Information from every device
+        #information_collector()  # Call information collector to gather update information on devices
         new_dict = self.collect()  # Collects updated information
         # 3.) Compares New Dicts to Old Dicts
         self.compare(old_dict, new_dict)
@@ -277,96 +330,3 @@ class Observer:
                 self.changes.append(alert)
 
 
-"""""
-class Observer:
-    def __init__(self, name, component_list, mininet_network):
-        #Configuring Observer from files/driver
-        self.name = name
-        self.state_dict = {}
-        self.trans_list = []
-        self.components = component_list
-        self.get_components()
-        self.net = mininet_network
-        self.find_nodes()
-        #Temp Structure for simulating updating JSON
-        self.update_log = []
-        self.net.start()
-
-    #Methods that keep Observer up-to-date and output useful information
-    #0.) Get Components
-    def get_components(self):
-        for state in self.components[0]:
-            update_dict = {state : 0}
-            self.state_dict.update(update_dict)
-        for trans in self.components[1]:
-            self.trans_list.append(trans)
-
-    #1.) Find New Devices
-    def find_nodes(self):
-        node_list = self.net.keys()
-        start_state = None
-        for state in self.state_dict:
-            if state.is_start:
-                start_state = state
-        if start_state:
-            for node in node_list:
-                start_state.add_node(node)
-        else:
-            print("Please next time designate a start state")
-
-    #2.) Find Nodes in State
-    def state_check(self):
-        for state in self.state_dict:
-            for node in state.nodes_in_state:
-                print("Node: "+node+" in State: "+state.name)
-
-    #3.) Updates Node Count for Observer State_Dict
-    def update_state_dict(self, state):
-        n_in_state = len(state.nodes_in_state)
-        update_dict = {state: n_in_state}
-        self.state_dict.update(update_dict)
-        print("Nodes in State: " + state.name +" = " + str(self.state_dict[state]))
-
-    #Transition Management Method
-    def run_transitions(self):
-        for state in self.state_dict:
-            for node in state.nodes_to_swap:
-                swap_code = state.nodes_to_swap[node]
-                for trans in self.trans_list:
-                    if swap_code == trans.code:
-                        state.remove_node(node)
-                        for d_state in self.state_dict:
-                            if d_state.name == trans.destination:
-                                d_state.add_node(node)
-                                print("Transition: Node - " + node + ": " + state.name + " --> " + d_state.name)
-            state.nodes_to_swap.clear()
-
-    #Will be constant operating method for observer
-    def listening(self):
-        is_listening = True
-        while is_listening:
-            print("Observer is Listening for Updates")
-            if len(self.update_log) > 0:
-                self.handle_update()
-            else:
-                is_listening = False
-            self.run_transitions()
-
-
-    #For purposes of this demonstration, this method only recieves a node, not what kind of update (This is for security example)
-    def handle_update(self):
-        update = self.update_log.pop()
-        for state in self.state_dict:
-            if state.nodes_in_state.__contains__(update):
-                print("Host found in State: "+state.name)
-                state.mark_unhealthy(update)
-
-    def test_transition(self):
-        for state in self.state_dict:
-            if state.is_start:
-                state.mark_new()
-    #Temp way to modularize stopping mn
-    def net_stop(self):
-        self.net.stop()
-
-"""""

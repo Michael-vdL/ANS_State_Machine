@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import QFormLayout, QLineEdit, QApplication, QDialog
 from gui.GUI_Workshop_Hub import *
 
 
+
 class Workshop_Adding_GUI(QDialog):
     def __init__(self, current_dict):
         super().__init__()
@@ -83,7 +84,7 @@ class Workshop_Adding_GUI(QDialog):
         # Create Labels
         self.lbl_name = QLabel("Enter Name: ")
         self.lbl_dest = QLabel("Enter Destination: ")
-        self.lbl_func = QLabel("Enter Function: ")
+        self.lbl_func = QLabel("Enter Trigger: ")
 
         # Create Line Edits
         self.le_name = QLineEdit()
@@ -116,7 +117,7 @@ class Workshop_Adding_GUI(QDialog):
             new_name = self.le_name.text()
             new_dest = self.le_dest.text()
             new_func = self.le_func.text()
-            self.new_item = {new_name: {'dest': new_dest, 'func': new_func}}
+            self.new_item = {new_name: {'destination': new_dest, 'trigger': new_func}}
 
         # 2.) self.close() should shut window down
         # print(self.new_item)
