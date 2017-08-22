@@ -1,0 +1,5 @@
+<rpc-reply message-id="urn:uuid:5148a6f2-4685-4993-9a2a-177cc9448328">
+<security-policies style="brief">
+<default-policy>deny-all</default-policy>
+</security-policies>
+</rpc-reply>

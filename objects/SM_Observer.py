@@ -122,6 +122,7 @@ class Observer:
     # Operational Functions
     ############################################
     def observe(self):
+        cycle_count = 1 #Increase to run more cycles (for testing purposes)
         # Monitoring Function
         while (True):
             print('Monitored')

@@ -1,0 +1,5 @@
+
+ 7:39PM  up 5 days,  1:47, 2 users, load averages: 0.00, 0.02, 0.01
+USER     TTY      FROM                              LOGIN@  IDLE WHAT
+root     v0       -                                Wed05PM    17 cli           
+root     p0       172.31.5.250                     7:04PM      6 cli           

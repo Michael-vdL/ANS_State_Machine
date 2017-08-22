@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b10fa42-7d8a-4b26-969c-3c96c58f015c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/routines/user_routines.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/triggers/new_entity_triggers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/GUI_Routines.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/routines.json" />
+    <list default="true" id="7b10fa42-7d8a-4b26-969c-3c96c58f015c" name="Default" comment="Version 0.8 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Trigger Conditions for Transitions&#10;- Routines for Entities within a state&#10;- Routine Handler to handle routines with long action lists and variable inputs&#10;- Separated information collection and ssh connections, push buttons for turning on and off connection&#10;&#10;Soon:&#10;- Full Cycle Functionality&#10;- Improved Regex functionality in routines&#10;- Nested Routines and do-after type function in routines">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/junos_entity_generator.py" afterPath="$PROJECT_DIR$/bin/junos_entity_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/junos_information_collector.py" afterPath="$PROJECT_DIR$/bin/junos_information_collector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Application_Hub.py" afterPath="$PROJECT_DIR$/gui/GUI_Application_Hub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" afterPath="$PROJECT_DIR$/gui/GUI_Observer_Hub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Test_Hub.py" afterPath="$PROJECT_DIR$/gui/GUI_Test_Hub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py" afterPath="$PROJECT_DIR$/gui/GUI_Workshop_Adding_Widget.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_Node.py" afterPath="$PROJECT_DIR$/objects/SM_Node.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_Observer.py" afterPath="$PROJECT_DIR$/objects/SM_Observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_State.py" afterPath="$PROJECT_DIR$/objects/SM_State.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SM_Transition.py" afterPath="$PROJECT_DIR$/objects/SM_Transition.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/junos/Junos_Node.py" afterPath="$PROJECT_DIR$/objects/junos/Junos_Node.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/states.json" afterPath="$PROJECT_DIR$/resources/states.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/transitions.json" afterPath="$PROJECT_DIR$/resources/transitions.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,112 +15,38 @@
     <SUITE FILE_PATH="coverage/ANS_State_Machine$SM_Starter_GUI.coverage" NAME="SM_Starter_GUI Coverage Results" MODIFIED="1503409996782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51349574">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="new_entity_triggers.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/api/triggers/new_entity_triggers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GUI_Routines.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/gui/GUI_Routines.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="668">
-                  <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="user_routines.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/api/routines/user_routines.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GUI_Test_Hub.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gui/GUI_Test_Hub.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="867">
-                  <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="routines.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/routines.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SM_Observer.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="131" column="53" lean-forward="true" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
-                  <folding>
-                    <element signature="e#19#49#0" expanded="true" />
-                    <element signature="e#1680#2153#0" expanded="false" />
-                    <element signature="e#2221#2745#0" expanded="false" />
-                    <element signature="e#3028#3636#0" expanded="false" />
-                    <element signature="e#3688#3749#0" expanded="false" />
-                    <element signature="e#3941#3987#0" expanded="false" />
-                    <element signature="e#4109#4275#0" expanded="false" />
-                    <element signature="e#4316#4414#0" expanded="false" />
-                    <element signature="e#5311#5839#0" expanded="false" />
-                    <element signature="e#5888#6111#0" expanded="false" />
-                    <element signature="e#6242#6638#0" expanded="false" />
-                    <element signature="e#6691#7104#0" expanded="false" />
-                    <element signature="e#7246#8109#0" expanded="false" />
-                    <element signature="e#8142#8573#0" expanded="false" />
-                    <element signature="e#8626#9701#0" expanded="false" />
-                    <element signature="e#9766#11658#0" expanded="false" />
-                    <element signature="e#11775#13481#0" expanded="false" />
-                    <element signature="e#13564#14763#0" expanded="false" />
-                    <element signature="e#14866#15835#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SM_State.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="455">
-                  <caret line="76" column="36" lean-forward="false" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#115#155#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SM_Observer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="124" column="75" lean-forward="false" selection-start-line="124" selection-start-column="75" selection-end-line="124" selection-end-column="75" />
+              <folding>
+                <element signature="e#19#49#0" expanded="true" />
+                <element signature="e#1682#2155#0" expanded="false" />
+                <element signature="e#2223#2747#0" expanded="false" />
+                <element signature="e#3030#3638#0" expanded="false" />
+                <element signature="e#3690#3751#0" expanded="false" />
+                <element signature="e#3943#3989#0" expanded="false" />
+                <element signature="e#4110#4276#0" expanded="false" />
+                <element signature="e#4317#4415#0" expanded="false" />
+                <element signature="e#5390#5921#0" expanded="false" />
+                <element signature="e#5970#6195#0" expanded="false" />
+                <element signature="e#6326#6722#0" expanded="false" />
+                <element signature="e#6775#7188#0" expanded="false" />
+                <element signature="e#7330#8195#0" expanded="false" />
+                <element signature="e#8228#8659#0" expanded="false" />
+                <element signature="e#8712#9787#0" expanded="false" />
+                <element signature="e#9852#11744#0" expanded="false" />
+                <element signature="e#11861#13567#0" expanded="false" />
+                <element signature="e#13650#14849#0" expanded="false" />
+                <element signature="e#14952#15921#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -214,8 +123,8 @@
         <option value="$PROJECT_DIR$/api/triggers/new_entity_triggers.py" />
         <option value="$PROJECT_DIR$/resources/routines.json" />
         <option value="$PROJECT_DIR$/gui/GUI_Routines.py" />
-        <option value="$PROJECT_DIR$/objects/SM_Observer.py" />
         <option value="$PROJECT_DIR$/objects/SM_State.py" />
+        <option value="$PROJECT_DIR$/objects/SM_Observer.py" />
       </list>
     </option>
   </component>
@@ -256,34 +165,7 @@
             <path>
               <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
               <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="routines" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
-              <item name="junos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ANS_State_Machine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ANS_State_Machine" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,9 +176,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Michael Von Der Lipp/Documents/GitHub/ANS_State_Machine/objects/SM_Observer.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -602,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502200856024</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Version 0.8 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Trigger Conditions for Transitions&#10;- Routines for Entities within a state&#10;- Routine Handler to handle routines with long action lists and variable inputs&#10;- Separated information collection and ssh connections, push buttons for turning on and off connection&#10;&#10;Soon:&#10;- Full Cycle Functionality&#10;- Improved Regex functionality in routines&#10;- Nested Routines and do-after type function in routines">
+      <created>1503411919077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1503411919077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -622,11 +511,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19029851" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47949526" sideWeight="0.21083455" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21885157" sideWeight="0.21428572" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21885157" sideWeight="0.78916544" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21885157" sideWeight="0.78571427" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -681,7 +570,8 @@
     <MESSAGE value="Version 0.6 - ANS Network State Machine&#10;&#10;Added Mininet and OpenDaylight Interactions&#10;&#10;--SSH to Mininet to create topos and have nodes&#10;&#10;To do next: Redo the node collection method so it gathers nodes from Open Daylight&#10;            Send Open Daylight Controller commands on how to control the network&#10;            Have Open Daylight Controller send Application information on the network as                  changes are made to mininet" />
     <MESSAGE value="Version 0.6 - ANS Network State Machine&#10;&#10;Added GUI for Junos&#10;&#10;--SSH to Mininet to create topos and have nodes&#10;&#10;To do next: Set up Junos SSH to work with GUI" />
     <MESSAGE value="Version 0.7 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Collect JSON data from Registered Juniper Devices&#10;- Compare incoming data with data that is being replaced&#10;- Issue alerts based on changed data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.7 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Collect JSON data from Registered Juniper Devices&#10;- Compare incoming data with data that is being replaced&#10;- Issue alerts based on changed data" />
+    <MESSAGE value="Version 0.8 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Trigger Conditions for Transitions&#10;- Routines for Entities within a state&#10;- Routine Handler to handle routines with long action lists and variable inputs&#10;- Separated information collection and ssh connections, push buttons for turning on and off connection&#10;&#10;Soon:&#10;- Full Cycle Functionality&#10;- Improved Regex functionality in routines&#10;- Nested Routines and do-after type function in routines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.8 - ANS Network State Machine&#10;&#10;Added Functionalities:&#10;- Trigger Conditions for Transitions&#10;- Routines for Entities within a state&#10;- Routine Handler to handle routines with long action lists and variable inputs&#10;- Separated information collection and ssh connections, push buttons for turning on and off connection&#10;&#10;Soon:&#10;- Full Cycle Functionality&#10;- Improved Regex functionality in routines&#10;- Nested Routines and do-after type function in routines" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -845,6 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -919,14 +810,14 @@
           <caret line="106" column="26" lean-forward="false" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
           <folding>
             <element signature="e#2066#2473#0" expanded="false" />
-            <element signature="e#2513#3268#0" expanded="false" />
-            <element signature="e#3319#3350#0" expanded="false" />
-            <element signature="e#3406#4425#0" expanded="false" />
-            <element signature="e#4481#4557#0" expanded="false" />
-            <element signature="e#5119#5141#0" expanded="false" />
-            <element signature="e#7069#7764#0" expanded="false" />
-            <element signature="e#7839#8778#0" expanded="false" />
-            <element signature="e#8825#9985#0" expanded="false" />
+            <element signature="e#2513#3319#0" expanded="false" />
+            <element signature="e#3370#3401#0" expanded="false" />
+            <element signature="e#3457#4476#0" expanded="false" />
+            <element signature="e#4532#4608#0" expanded="false" />
+            <element signature="e#5165#5187#0" expanded="false" />
+            <element signature="e#7144#7839#0" expanded="false" />
+            <element signature="e#7914#8858#0" expanded="false" />
+            <element signature="e#8906#10061#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,6 +826,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -962,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/triggers/new_entity_triggers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/jnpr/junos/utils/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -978,20 +862,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/GUI_Routines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routines/user_routines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -1008,46 +882,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/routines.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="131" column="53" lean-forward="true" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
-          <folding>
-            <element signature="e#19#49#0" expanded="true" />
-            <element signature="e#1680#2153#0" expanded="false" />
-            <element signature="e#2221#2745#0" expanded="false" />
-            <element signature="e#3028#3636#0" expanded="false" />
-            <element signature="e#3688#3749#0" expanded="false" />
-            <element signature="e#3941#3987#0" expanded="false" />
-            <element signature="e#4109#4275#0" expanded="false" />
-            <element signature="e#4316#4414#0" expanded="false" />
-            <element signature="e#5311#5839#0" expanded="false" />
-            <element signature="e#5888#6111#0" expanded="false" />
-            <element signature="e#6242#6638#0" expanded="false" />
-            <element signature="e#6691#7104#0" expanded="false" />
-            <element signature="e#7246#8109#0" expanded="false" />
-            <element signature="e#8142#8573#0" expanded="false" />
-            <element signature="e#8626#9701#0" expanded="false" />
-            <element signature="e#9766#11658#0" expanded="false" />
-            <element signature="e#11775#13481#0" expanded="false" />
-            <element signature="e#13564#14763#0" expanded="false" />
-            <element signature="e#14866#15835#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/objects/SM_State.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="76" column="36" lean-forward="false" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+          <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
           <folding>
             <element signature="e#115#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/GUI_Routines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#681#1931#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/triggers/new_entity_triggers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/SM_Observer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="124" column="75" lean-forward="false" selection-start-line="124" selection-start-column="75" selection-end-line="124" selection-end-column="75" />
+          <folding>
+            <element signature="e#19#49#0" expanded="true" />
+            <element signature="e#1682#2155#0" expanded="false" />
+            <element signature="e#2223#2747#0" expanded="false" />
+            <element signature="e#3030#3638#0" expanded="false" />
+            <element signature="e#3690#3751#0" expanded="false" />
+            <element signature="e#3943#3989#0" expanded="false" />
+            <element signature="e#4110#4276#0" expanded="false" />
+            <element signature="e#4317#4415#0" expanded="false" />
+            <element signature="e#5390#5921#0" expanded="false" />
+            <element signature="e#5970#6195#0" expanded="false" />
+            <element signature="e#6326#6722#0" expanded="false" />
+            <element signature="e#6775#7188#0" expanded="false" />
+            <element signature="e#7330#8195#0" expanded="false" />
+            <element signature="e#8228#8659#0" expanded="false" />
+            <element signature="e#8712#9787#0" expanded="false" />
+            <element signature="e#9852#11744#0" expanded="false" />
+            <element signature="e#11861#13567#0" expanded="false" />
+            <element signature="e#13650#14849#0" expanded="false" />
+            <element signature="e#14952#15921#0" expanded="false" />
           </folding>
         </state>
       </provider>
